@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NBA Shot Poems</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <h1>NBA Shot Selection</h1>
+        <p class="subtitle">
+          Select a player and see their shot distribution visualized on the court
+        </p>
+        <p class="data-note">
+          Data: Synthetic shot distributions based on 2024–25 NBA player profiles
+        </p>
+      </header>
+
+      <section class="control-row" aria-label="Visualization controls">
+        <label for="playerSelect">Player</label>
+        <select id="playerSelect" aria-describedby="emptyHelp">
+          <option value="">Select a player</option>
+        </select>
+        <button id="resetView" type="button">Clear Court</button>
+      </section>
+
+      <main class="viz-grid">
+        <section class="court-panel" aria-label="Half-court visualization">
+          <div id="viz"></div>
+          <p id="emptyHelp" class="empty-help">
+            Start by selecting a player. The court is intentionally empty at load.
+          </p>
+        </section>
+
+        <section class="chart-panel" aria-label="Shot distribution chart">
+          <div id="distChart"></div>
+          <p id="chartHelp" class="empty-help">Zone distribution will appear here</p>
+        </section>
+
+        <aside class="meta-panel" aria-label="Legend and summary">
+          <div class="legend-box">
+            <h2>Legend</h2>
+            <ul>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="rim" checked />
+                  <span class="dot rim"></span>
+                  At Rim
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="paint" checked />
+                  <span class="dot paint"></span>
+                  Paint
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="mid" checked />
+                  <span class="dot mid"></span>
+                  Mid-Range
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="corner3" checked />
+                  <span class="dot corner3"></span>
+                  Corner 3
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="wing3Left" checked />
+                  <span class="dot wing3left"></span>
+                  Left Wing 3
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="wing3Right" checked />
+                  <span class="dot wing3right"></span>
+                  Right Wing 3
+                </label>
+              </li>
+              <li>
+                <label class="legend-filter">
+                  <input class="zone-filter" type="checkbox" data-zone="topKey3" checked />
+                  <span class="dot topkey3"></span>
+                  Top of Key 3
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="stats-box">
+            <h2>Player Snapshot</h2>
+            <p id="playerName">No player selected</p>
+            <dl>
+              <div>
+                <dt>Made Shots (Shown)</dt>
+                <dd id="shotCount">-</dd>
+              </div>
+              <div>
+                <dt>Avg Distance</dt>
+                <dd id="avgDistance">-</dd>
+              </div>
+              <div>
+                <dt>Favorite Shot</dt>
+                <dd id="topZone">-</dd>
+              </div>
+              <div>
+                <dt>FG%</dt>
+                <dd id="fgPct">-</dd>
+              </div>
+              <div>
+                <dt>3PT%</dt>
+                <dd id="threePct">-</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </main>
+
+    </div>
+
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

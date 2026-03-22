@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Stephen Curry",
+    "team": "Golden State Warriors",
+    "shotCount": 98,
+    "fgPct": 0.451,
+    "threePtPct": 0.408,
+    "weights": {
+      "rim": 0.12,
+      "paint": 0.1,
+      "mid": 0.12,
+      "corner3": 0.11,
+      "wing3Left": 0.18,
+      "wing3Right": 0.18,
+      "topKey3": 0.19
+    }
+  },
+  {
+    "name": "Damian Lillard",
+    "team": "Milwaukee Bucks",
+    "shotCount": 92,
+    "fgPct": 0.424,
+    "threePtPct": 0.354,
+    "weights": {
+      "rim": 0.17,
+      "paint": 0.1,
+      "mid": 0.14,
+      "corner3": 0.09,
+      "wing3Left": 0.18,
+      "wing3Right": 0.17,
+      "topKey3": 0.15
+    }
+  },
+  {
+    "name": "Luka Doncic",
+    "team": "Dallas Mavericks",
+    "shotCount": 106,
+    "fgPct": 0.487,
+    "threePtPct": 0.382,
+    "weights": {
+      "rim": 0.24,
+      "paint": 0.14,
+      "mid": 0.18,
+      "corner3": 0.04,
+      "wing3Left": 0.13,
+      "wing3Right": 0.13,
+      "topKey3": 0.14
+    }
+  },
+  {
+    "name": "Jayson Tatum",
+    "team": "Boston Celtics",
+    "shotCount": 100,
+    "fgPct": 0.471,
+    "threePtPct": 0.376,
+    "weights": {
+      "rim": 0.19,
+      "paint": 0.13,
+      "mid": 0.18,
+      "corner3": 0.11,
+      "wing3Left": 0.13,
+      "wing3Right": 0.13,
+      "topKey3": 0.13
+    }
+  },
+  {
+    "name": "Devin Booker",
+    "team": "Phoenix Suns",
+    "shotCount": 94,
+    "fgPct": 0.492,
+    "threePtPct": 0.368,
+    "weights": {
+      "rim": 0.22,
+      "paint": 0.13,
+      "mid": 0.3,
+      "corner3": 0.08,
+      "wing3Left": 0.09,
+      "wing3Right": 0.09,
+      "topKey3": 0.09
+    }
+  },
+  {
+    "name": "Giannis Antetokounmpo",
+    "team": "Milwaukee Bucks",
+    "shotCount": 88,
+    "fgPct": 0.611,
+    "threePtPct": 0.274,
+    "weights": {
+      "rim": 0.55,
+      "paint": 0.29,
+      "mid": 0.11,
+      "corner3": 0.01,
+      "wing3Left": 0.01,
+      "wing3Right": 0.01,
+      "topKey3": 0.02
+    }
+  },
+  {
+    "name": "Nikola Jokic",
+    "team": "Denver Nuggets",
+    "shotCount": 90,
+    "fgPct": 0.583,
+    "threePtPct": 0.359,
+    "weights": {
+      "rim": 0.35,
+      "paint": 0.24,
+      "mid": 0.27,
+      "corner3": 0.02,
+      "wing3Left": 0.04,
+      "wing3Right": 0.04,
+      "topKey3": 0.04
+    }
+  },
+  {
+    "name": "Anthony Edwards",
+    "team": "Minnesota Timberwolves",
+    "shotCount": 99,
+    "fgPct": 0.461,
+    "threePtPct": 0.357,
+    "weights": {
+      "rim": 0.28,
+      "paint": 0.13,
+      "mid": 0.17,
+      "corner3": 0.1,
+      "wing3Left": 0.11,
+      "wing3Right": 0.11,
+      "topKey3": 0.1
+    }
+  },
+  {
+    "name": "Kevin Durant",
+    "team": "Phoenix Suns",
+    "shotCount": 93,
+    "fgPct": 0.527,
+    "threePtPct": 0.413,
+    "weights": {
+      "rim": 0.18,
+      "paint": 0.14,
+      "mid": 0.39,
+      "corner3": 0.06,
+      "wing3Left": 0.08,
+      "wing3Right": 0.08,
+      "topKey3": 0.07
+    }
+  },
+  {
+    "name": "Victor Wembanyama",
+    "team": "San Antonio Spurs",
+    "shotCount": 90,
+    "fgPct": 0.465,
+    "threePtPct": 0.325,
+    "weights": {
+      "rim": 0.33,
+      "paint": 0.19,
+      "mid": 0.16,
+      "corner3": 0.08,
+      "wing3Left": 0.08,
+      "wing3Right": 0.08,
+      "topKey3": 0.08
+    }
+  },
+  {
+    "name": "Jalen Brunson",
+    "team": "New York Knicks",
+    "shotCount": 94,
+    "fgPct": 0.479,
+    "threePtPct": 0.401,
+    "weights": {
+      "rim": 0.2,
+      "paint": 0.15,
+      "mid": 0.24,
+      "corner3": 0.08,
+      "wing3Left": 0.11,
+      "wing3Right": 0.11,
+      "topKey3": 0.11
+    }
+  },
+  {
+    "name": "Donovan Mitchell",
+    "team": "Cleveland Cavaliers",
+    "shotCount": 98,
+    "fgPct": 0.462,
+    "threePtPct": 0.368,
+    "weights": {
+      "rim": 0.24,
+      "paint": 0.12,
+      "mid": 0.16,
+      "corner3": 0.09,
+      "wing3Left": 0.14,
+      "wing3Right": 0.14,
+      "topKey3": 0.11
+    }
+  },
+  {
+    "name": "Tyrese Haliburton",
+    "team": "Indiana Pacers",
+    "shotCount": 92,
+    "fgPct": 0.477,
+    "threePtPct": 0.382,
+    "weights": {
+      "rim": 0.17,
+      "paint": 0.13,
+      "mid": 0.16,
+      "corner3": 0.11,
+      "wing3Left": 0.14,
+      "wing3Right": 0.14,
+      "topKey3": 0.15
+    }
+  },
+  {
+    "name": "Shai Gilgeous-Alexander",
+    "team": "Oklahoma City Thunder",
+    "shotCount": 104,
+    "fgPct": 0.519,
+    "threePtPct": 0.353,
+    "weights": {
+      "rim": 0.31,
+      "paint": 0.21,
+      "mid": 0.22,
+      "corner3": 0.06,
+      "wing3Left": 0.07,
+      "wing3Right": 0.07,
+      "topKey3": 0.06
+    }
+  },
+  {
+    "name": "LeBron James",
+    "team": "Los Angeles Lakers",
+    "shotCount": 96,
+    "fgPct": 0.54,
+    "threePtPct": 0.41,
+    "weights": {
+      "rim": 0.34,
+      "paint": 0.16,
+      "mid": 0.19,
+      "corner3": 0.08,
+      "wing3Left": 0.08,
+      "wing3Right": 0.08,
+      "topKey3": 0.07
+    }
+  }
+]

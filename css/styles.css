@@ -1,0 +1,335 @@
+:root {
+  --bg: #2a2119;
+  --panel: #3a2d23;
+  --line: #f2d8b2;
+  --line-soft: rgba(242, 216, 178, 0.35);
+  --text: #f7ecd8;
+  --text-soft: #d7c2a3;
+  --accent: #23b5a7;
+  --accent-soft: rgba(35, 181, 167, 0.22);
+  --rim: #ff8f5a;
+  --paint: #ffcf6e;
+  --mid: #6fd6c4;
+  --corner3: #7ca9ff;
+  --wing3left: #6f98ef;
+  --wing3right: #8bb8ff;
+  --topkey3: #aacdff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: "Outfit", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 230, 196, 0.11), transparent 44%),
+    radial-gradient(circle at 85% 90%, rgba(120, 82, 53, 0.16), transparent 42%),
+    linear-gradient(165deg, #2d231a 0%, #3a2d22 46%, #33271d 100%);
+}
+
+.page-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 2.5rem;
+}
+
+.hero {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-soft);
+  font-size: 0.74rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4.6vw, 3.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-soft);
+  max-width: 70ch;
+}
+
+.data-note {
+  margin: 0.6rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+}
+
+.control-row {
+  display: grid;
+  grid-template-columns: auto minmax(170px, 300px) auto;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 0.9rem;
+}
+
+.control-row label {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+.control-row select,
+.control-row button {
+  font: inherit;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.17);
+  color: var(--text);
+  padding: 0.55rem 0.75rem;
+}
+
+.control-row button {
+  cursor: pointer;
+  background: var(--accent-soft);
+  border-color: rgba(35, 181, 167, 0.5);
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), background 220ms;
+}
+
+.control-row button:hover {
+  background: rgba(35, 181, 167, 0.35);
+}
+
+.control-row button:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.viz-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(200px, 1fr) minmax(260px, 1fr);
+  gap: 1rem;
+}
+
+.court-panel,
+.chart-panel,
+.meta-panel > * {
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.16));
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.court-panel {
+  padding: 0.85rem;
+}
+
+.chart-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem;
+}
+
+#distChart {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+#viz {
+  width: 100%;
+  aspect-ratio: 50 / 47;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255, 235, 205, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(191, 136, 90, 0.22), rgba(122, 82, 51, 0.3));
+}
+
+.empty-help {
+  margin: 0.65rem 0 0.2rem;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+}
+
+.meta-panel {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.legend-box,
+.stats-box {
+  padding: 0.9rem;
+}
+
+.meta-panel h2 {
+  margin: 0 0 0.65rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.legend-box ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.52rem;
+}
+
+.legend-box li {
+  color: var(--text-soft);
+}
+
+.legend-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.58rem;
+  cursor: pointer;
+}
+
+.legend-filter input[type="checkbox"] {
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.rim { background: var(--rim); }
+.paint { background: var(--paint); }
+.mid { background: var(--mid); }
+.corner3 { background: var(--corner3); }
+.wing3left { background: var(--wing3left); }
+.wing3right { background: var(--wing3right); }
+.topkey3 { background: var(--topkey3); }
+
+.stats-box #playerName {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-size: 1.03rem;
+  font-weight: 600;
+}
+
+.stats-box dl {
+  margin: 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.stats-box dl div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.38rem;
+}
+
+.stats-box dt {
+  color: var(--text-soft);
+}
+
+.notes {
+  margin-top: 1rem;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.notes p {
+  margin: 0;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.court-lines {
+  stroke: var(--line);
+  stroke-width: 2;
+  fill: none;
+}
+
+.court-lines.soft {
+  stroke: var(--line-soft);
+  stroke-width: 1.35;
+}
+
+.shot-dot {
+  stroke: rgba(255, 245, 230, 0.66);
+  stroke-width: 1;
+  cursor: pointer;
+  transition: r 140ms cubic-bezier(0.16, 1, 0.3, 1), filter 140ms ease;
+}
+
+.shot-dot:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+}
+
+.zone-slice {
+  transition: opacity 140ms ease;
+}
+
+.zone-slice:hover {
+  opacity: 0.95;
+}
+
+.shot-arc {
+  fill: none;
+  stroke: rgba(255, 245, 230, 0.7);
+  stroke-width: 1.25;
+  mix-blend-mode: screen;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  padding: 0.45rem 0.52rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(17, 12, 10, 0.86);
+  color: #ffefda;
+  opacity: 0;
+  transform: translate(6px, -8px);
+  transition: opacity 130ms ease;
+  z-index: 20;
+}
+
+@media (max-width: 900px) {
+  .viz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .control-row {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
